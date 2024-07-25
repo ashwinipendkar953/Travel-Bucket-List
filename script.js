@@ -17,6 +17,7 @@ addBtn.addEventListener("click", () => {
      </p>`;
 
   displayTravelList.appendChild(listElement);
+  destinationName.value = "";
 });
 
 function countVistedPlaces(checkbox) {
