@@ -4,7 +4,7 @@ const displayVisitedCount = document.querySelector("#displayVisitedCount");
 let visitedPlacesCount = 0;
 
 addBtn.addEventListener("click", () => {
-  const destinationName = document.querySelector("#destinationName").value;
+  const destinationName = document.querySelector("#destinationName");
 
   const listElement = document.createElement("li");
   listElement.className = "my-2";
@@ -12,7 +12,7 @@ addBtn.addEventListener("click", () => {
   listElement.innerHTML = `<p>
         <input type="checkbox" 
         class="destinationVisitedCheckbox"
-        onChange="countVistedPlaces(this)" /> ${destinationName}
+        onChange="countVistedPlaces(this)" /> ${destinationName.value}
      <button class="btn btn-danger" id="deleteBtn" onClick="deleteDestination(this)">Delete</button>
      </p>`;
 
